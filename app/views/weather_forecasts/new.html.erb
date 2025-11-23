@@ -2,7 +2,7 @@
 
 <%= form_with url: weather_forecasts_path, method: :post, data: { turbo: false } do |f| %>
   <div>
-    <%= f.label :input, "Enter City or ZIP Code" %><br><br>
+    <%= f.label :input, "Enter Location Name or ZIP Code" %><br><br>
     <%= f.text_field :input %>
   </div>
   <br>

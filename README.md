@@ -1,24 +1,41 @@
-# README
+# Weather Forecast App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails app for TekSystems Ruby Coding Assessment.
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+- Accepts an address/ZIP as input
+- Retrieves current weather conditions
+- Caches forecast for 30 minutes
+- Displays an indicator if result was served from cache
 
-* System dependencies
+## Tech
 
-* Configuration
+- Ruby on Rails
+- Faraday for HTTP calls
+- Rails.cache for caching
+- RSpec for tests
+- Dotenv for environment variables
+- OpenWeatherMap API for Weather data
 
-* Database creation
+## Setup
 
-* Database initialization
+```bash
+git clone <repo-url>
+cd weather_forecast_app
+bundle install
+cp .env.example .env  
+```
 
-* How to run the test suite
+### Get your api_key
+- Login to https://home.openweathermap.org/api_keys and get the api_key
+- replace it in .env file
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+rails server
+```
 
-* Deployment instructions
-
-* ...
+## Implemented Cases
+- Get weather forecast for both location and zipcode
+- Handled Edge cases of wrong input, no input
+- Cached the data for 30 minutes
