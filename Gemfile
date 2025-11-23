@@ -64,3 +64,14 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# For HTTP calls
+gem 'httparty'
+
+# For environment variables
+gem 'dotenv-rails', groups: [:development, :test]
+
+# For tests (if you want RSpec instead of default Minitest)
+group :development, :test do
+  gem 'rspec-rails'
+end
