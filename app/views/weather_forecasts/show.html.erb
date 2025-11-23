@@ -1,0 +1,15 @@
+<h1>Weather Result</h1>
+
+<p><strong>Location:</strong> <%= @result[:location] %></p>
+<p><strong>Temperature:</strong> <%= @result[:temp] %> °C</p>
+<p><strong>Feels Like:</strong> <%= @result[:feels_like] %> °C</p>
+<p><strong>Humidity:</strong> <%= @result[:humidity] %> %</p>
+<p><strong>Description:</strong> <%= @result[:description] %></p>
+
+<% if @result[:from_cache] %>
+  <p style="color: green; font-weight: bold;">(Fetched from cache)</p>
+<% else %>
+  <p style="color: gray;">(Fetched from API)</p>
+<% end %>
+
+<%= link_to "Search again", root_path %>

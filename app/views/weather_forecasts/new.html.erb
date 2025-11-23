@@ -1,0 +1,16 @@
+<h1>Weather Forecast</h1>
+
+<%= form_with url: weather_forecasts_path, method: :post, data: { turbo: false } do |f| %>
+  <div>
+    <%= f.label :input, "Enter City or ZIP Code" %><br><br>
+    <%= f.text_field :input %>
+  </div>
+  <br>
+  <div style="margin-top: 10px;">
+    <%= f.submit "Get Weather Forecast" %>
+  </div>
+<% end %>
+
+<% if flash[:alert] %>
+  <p style="color: red;"><%= flash[:alert] %></p>
+<% end %>

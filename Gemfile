@@ -66,12 +66,13 @@ group :test do
 end
 
 # For HTTP calls
-gem 'httparty'
+gem "faraday"
 
 # For environment variables
 gem 'dotenv-rails', groups: [:development, :test]
 
 # For tests (if you want RSpec instead of default Minitest)
 group :development, :test do
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
 end
